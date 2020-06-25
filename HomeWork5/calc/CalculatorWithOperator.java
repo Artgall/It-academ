@@ -1,8 +1,6 @@
 package HomeWork5;
 
 public class CalculatorWithOperator {
-    public CalculatorWithOperator() {
-    }
 
     // Метод сложения
     public double plus (double a, double b) {
