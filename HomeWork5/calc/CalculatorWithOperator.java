@@ -21,7 +21,7 @@ public class CalculatorWithOperator {
     // Метод возведения в степень
     public double power (double a, double b) {
         double result = 1;
-        for (int i = 0; i <= b; i++) {
+        for (int i = 0; i < b; i++) {
             result *= a;
         }
         return result;
