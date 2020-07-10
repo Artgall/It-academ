@@ -6,7 +6,7 @@ package src.HomeWork6;
 public class NBRBLoader extends SiteLoader{
 
     public static final String CurOfficialRate = "Cur_OfficialRate";
-    public static final char colon = ':';
+    public static final char Colon = ':';
 
 
     /**
@@ -31,7 +31,7 @@ public class NBRBLoader extends SiteLoader{
         int officialRateIndex = content.indexOf(CurOfficialRate); //запрашивает индекс "Cur_OfficialRate"
 
         String kyrs = content.substring(officialRateIndex);//берёт данные начиная с "Cur_OfficialRate"
-        int i = kyrs.indexOf(colon); //запрашивает индекс ":"
+        int i = kyrs.indexOf(Colon); //запрашивает индекс ":"
 
         String value = kyrs.substring(i + 1, i + 7); //первое i - двоеточие + 1, второе двоеточие + 7
 
