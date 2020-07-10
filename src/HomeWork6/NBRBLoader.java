@@ -5,8 +5,8 @@ package src.HomeWork6;
  */
 public class NBRBLoader extends SiteLoader{
 
-    public static final String CUR_OFFICIAL_RATE = "Cur_OfficialRate";
-    public static final char COLON = ':';
+    public static final String CurOfficialRate = "Cur_OfficialRate";
+    public static final char colon = ':';
 
 
     /**
@@ -28,13 +28,13 @@ public class NBRBLoader extends SiteLoader{
     @Override
     protected double handle(String content, Currency currencyName) {
         //TODO дописываем код сюда
-        int officialRateIndex = content.indexOf(CUR_OFFICIAL_RATE); //запрашивает индекс "Cur_OfficialRate"
+        int officialRateIndex = content.indexOf(CurOfficialRate); //запрашивает индекс "Cur_OfficialRate"
 
-        String substring = content.substring(officialRateIndex);//вытягивает данные начиная с "Cur_OfficialRate"
-        int i = substring.indexOf(COLON); //запрашивает индекс ":"
+        String kyrs = content.substring(officialRateIndex);//берёт данные начиная с "Cur_OfficialRate"
+        int i = kyrs.indexOf(colon); //запрашивает индекс ":"
 
-        String value = substring.substring(i + 1, i + 7); //первое i - двоеточие + 1, второе двоеточие + 7, т.е. цифры 2.6753
+        String value = kyrs.substring(i + 1, i + 7); //первое i - двоеточие + 1, второе двоеточие + 7
 
-        return Double.parseDouble(value); //выводит валюту (2.6753)
+        return Double.parseDouble(value); //выводит валюту
     }
 }
